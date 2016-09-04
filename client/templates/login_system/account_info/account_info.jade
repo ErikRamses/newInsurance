@@ -1,0 +1,47 @@
+template(name="AccountInfo")
+  .content-block-title Icons and inputs
+  .list-block
+    ul
+      // Text inputs
+      li
+        .item-content
+          .item-media
+            i.icon.icon-form-name
+          .item-inner
+            .item-input
+              input(type='text', placeholder='Your name')
+      li
+        .item-content
+          .item-media
+            i.icon.icon-form-email
+          .item-inner
+            .item-input
+              input(type='email', placeholder='E-mail')
+      // Select
+      li
+        .item-content
+          .item-media
+            i.icon.icon-form-gender
+          .item-inner
+            .item-input
+              select
+                option Male
+                option Female
+      // Date
+      li
+        .item-content
+          .item-media
+            i.icon.icon-form-calendar
+          .item-inner
+            .item-input
+              input(type='date', placeholder='Birth day', value='2014-04-30')
+      // Switch (Checkbox)
+      li
+        .item-content
+          .item-media
+            i.icon.icon-form-toggle
+          .item-inner
+            .item-input
+              label.label-switch
+                input(type='checkbox')
+                .checkbox

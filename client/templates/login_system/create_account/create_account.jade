@@ -1,0 +1,24 @@
+template(name="CreateAccount")
+    .login-screen.modal-in
+      .view
+        .page
+          .page-content.login-screen-content
+            .login-screen-title
+              +logo
+            form
+              .list-block
+                ul
+                  li.item-content
+                    .item-inner                 
+                      .item-input
+                        input(type='text', name='registerUsername', placeholder='Your username')                
+                  li.item-content
+                    .item-inner                
+                      .item-input
+                        input(type='password', name='registerPassword', placeholder='Your password')       
+              .list-block
+                ul
+                  li
+                    input.item-link.list-button.button.ripple-blue.button-big.button-fill.button-raised(type="submit" value="Create account")         
+                .list-block-label
+                  a(href="{{pathFor 'login'}}") I already have an account, login.

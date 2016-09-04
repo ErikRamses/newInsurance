@@ -1,0 +1,61 @@
+template(name='MasterLayout')
+  +panelContent
+  .views
+    .view.view-main
+        .navbar
+          .navbar-inner.navbar-on-center
+            //.center.sliding Eichelmann insurance app
+            .right
+              a.link.icon-only.open-panel(href='#')
+                img.menu.shadowed(src="/img/menu.svg")
+        +yield
+template(name='panelContent')
+  .statusbar-overlay
+  .panel-overlay
+  .panel.panel-left.panel-cover.layout-dark
+    .profile
+      .content-block-title 
+        p.text-center
+          img.profile-picture.img-circle(src="https://scontent-dft4-1.xx.fbcdn.net/v/t1.0-9/12742577_10156380840805391_2096100211073014998_n.jpg?oh=0b322326a205650aa84a75646d8eb9e3&oe=58582CBB")
+        p.text-center
+          span ISRAEL ORTIZ CORTÉS
+    +Menu
+
+template(name='Menu')
+  .list-block
+    ul
+      li
+        a.item-link.close-panel(href="{pathFor'Profile'}")
+          .item-content
+            .item-media
+              i.fa.fa-user.fa-sidebar
+            .item-inner
+              .item-title My profile
+      li
+        a.item-link.close-panel(href='')
+          .item-content
+            .item-media
+              img.chat.icon-sidebar(src="/img/chatVector.svg")
+            .item-inner
+              .item-title Chat with us
+      li
+        a.item-link.close-panel(href='')
+          .item-content
+            .item-media
+              i.fa.fa-star.fa-sidebar
+            .item-inner
+              .item-title Vote
+      li 
+        a.item-link.close-panel(href='')
+          .item-content
+            .item-media
+              .fa.fa-share-alt.fa-sidebar
+            .item-inner
+              .item-title Share and win
+      li
+        a.item-link.close-panel(href='')
+          .item-content
+            .item-media
+              i.fa.fa-sign-out.fa-sidebar
+            .item-inner
+              .item-title#logout Logout

@@ -1,0 +1,29 @@
+template(name='Login') 
+    .login-screen.modal-in
+      .view
+        .page
+          .page-content.login-screen-content
+            .login-screen-title
+              +logo
+            form#login
+              .list-block
+                ul
+                  li.item-content
+                    .item-inner            
+                      .item-input
+                        input(type='text', name='username', placeholder='Your username')
+                                   
+                  li.item-content
+                    .item-inner           
+                      .item-input
+                        input(type='password', name='password', placeholder='Your password')
+                           
+              .list-block
+                ul
+                  li
+                    input.item-link.list-button.button.ripple-blue.button-big.button-fill.button-raised(type="submit" value="Login")               
+                .list-block-label
+                  a(href="{{pathFor 'createAccount'}}") Create an account
+
+                .list-block-label
+                  a(href="")#facebook-login Login With Facebook

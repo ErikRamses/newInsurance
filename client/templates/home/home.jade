@@ -1,0 +1,18 @@
+template(name='Home')
+  +welcome
+template(name="welcome")
+  .pages.navbar-through.toolbar-through
+    .page.page-on-center(data-page='index')
+      //+bottomButtons
+      +contenidoDashboard
+template(name="contenidoDashboard")
+  .page-content.dashboard
+    .content-block
+      .llamadaRender
+        a(href="tel:+8119860234")
+          img.llamada(src="/img/telefonoVector.svg")
+      .chatRender
+        a(href="{{pathFor 'chat'}}")
+          img.chat(src="/img/chatVector.svg")
+    img.choque.shadowed(src="/img/choque.svg")
+
