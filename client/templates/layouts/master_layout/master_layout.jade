@@ -16,23 +16,22 @@ template(name='panelContent')
     .profile
       .content-block-title 
         p.text-center
-          img.profile-picture.img-circle(src="https://scontent-dft4-1.xx.fbcdn.net/v/t1.0-9/12742577_10156380840805391_2096100211073014998_n.jpg?oh=0b322326a205650aa84a75646d8eb9e3&oe=58582CBB")
+          img.profile-picture.img-circle(src="http://goo.gl/BDP5bO")
         p.text-center
           span ISRAEL ORTIZ CORTÉS
     +Menu
-
 template(name='Menu')
   .list-block
     ul
       li
-        a.item-link.close-panel(href="{pathFor'Profile'}")
+        a.item-link.close-panel(href="{{pathFor 'profile'}}")
           .item-content
             .item-media
               i.fa.fa-user.fa-sidebar
             .item-inner
               .item-title My profile
       li
-        a.item-link.close-panel(href='')
+        a.item-link.close-panel(href="{{pathFor 'chat'}}")
           .item-content
             .item-media
               img.chat.icon-sidebar(src="/img/chatVector.svg")
