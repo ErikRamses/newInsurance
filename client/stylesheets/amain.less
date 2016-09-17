@@ -2,9 +2,13 @@
 /* main: Style */
 /*****************************************************************************/
 //generales
-@import 'https://fonts.googleapis.com/css?family=Roboto';
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,700';
 body {
 	font-family: 'Roboto', sans-serif;
+}
+.light {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
 }
 .img-circle {
 	border-radius: 50%;
@@ -13,37 +17,102 @@ body {
 	margin: 0 auto;
 	text-align: center;
 }
+
+
+//sidebar
+.circle-red {
+	color: #dd5c5f;
+	padding-right: 4px;
+}
+.type-client {
+	padding-left: 20px;
+	margin-top: 10px;
+	line-height: 0px;
+}
+.button-transparent {
+	border: 1px solid #fff;
+	color: #fff;
+	padding: 8px;
+	border-radius: 10px;
+}
+hr.white {
+    color: #fff;
+    margin-top: 20px;
+    border-top: transparent;
+    margin-bottom: 36px;
+    width: 80%;
+}
+.position-bottom {
+	bottom: 0;
+	padding-top: 40px;
+}
+.content-block-gear {
+    margin: 0px 0px 87px 0px!important;
+    .fa-cog {
+    	margin-right: -15px;
+    }
+}
 //sidebar 
-.sidebar {
-	margin-left: 0px;
-}
-.fa-sidebar {
-	font-size: 1.7em;
-}
-.icon-sidebar {
-	max-width: 20px;
-}
-.profile {
-	background-color: #3C74D8;
+//.sidebar {
+//	margin-left: 0px;
+//}
+//.fa-sidebar {
+//	font-size: 1.7em;
+//}
+
+//cards
+.profile-card {
+	background: rgba(93,93,93,.5);
 	padding: 20px;
-	.profile-picture {
-		width: 25%;
-		margin-bottom: 5px;
-	}
-	//.content-block-title {
-	//	text-align: center;
-	//}	
+	height: 250px;
+	color: #fff;
 }
-.panel-left {
-	.list-block {
-		margin-top: 0px;
+
+.profile-card::after {
+  content: "";
+  background-size: cover;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  height: 290px;
+  z-index: -1;   
+}
+
+.info-cards {
+	margin: 0px!important;
+	li {
+		padding: 20px 36px 20px 36px;
+		p {
+			margin: 5px 5px 5px 5px;
+		}
+	}
+	li:nth-child(1) {
+		background-color: #287dcf!important;
+	}
+	li:nth-child(2) {
+		background-color: #dd5c5f!important;
+	}
+	li:nth-child(3) {
+		background-color: #3c4468!important;
 	}
 }
 
+//.panel {
+//	width: 360px!important;
+//}
+//.panel-left {
+//	.list-block {
+//		margin-top: 0px;
+//	}
+//}
 
-.page {
-	//padding-top: 98px;
-}
+
+//.page {
+//	//padding-top: 98px;
+//}
 
 .login-screen {
 	.page, .page-content {
@@ -71,7 +140,7 @@ body {
 }
 
 .menu {
-	max-height: 64px;
+	max-height: 80px;
 }
 
 .navbar a.link {

@@ -13,48 +13,35 @@ template(name='panelContent')
   .statusbar-overlay
   .panel-overlay
   .panel.panel-left.panel-cover.layout-dark
-    .profile
-      .content-block-title 
-        p.text-center
-          img.profile-picture.img-circle(src="http://goo.gl/BDP5bO")
-        p.text-center
-          span ISRAEL ORTIZ CORTÉS
+    style.
+      .profile-card::after {
+        background-image: url({{currentUser.profile.profilePicture}});
+      }
+    .profile-card
+      .content-block.content-block-gear
+        i.fa.fa-cog.fa-2x.pull-right
+      .content-block-title.position-bottom
+        p
+          .fa.fa-circle.circle-red
+          {{currentUser.profile.name}}
+        p.type-client.light
+          | Regular client
+        hr.white
+        p.light
+          a.button-transparent(href="#") Invite friends
     +Menu
 template(name='Menu')
-  .list-block
+  .list-block.info-cards
     ul
       li
-        a.item-link.close-panel(href="{{pathFor 'profile'}}")
-          .item-content
-            .item-media
-              i.fa.fa-user.fa-sidebar
-            .item-inner
-              .item-title My profile
+        p.light Number on id card
+        if currentUser
+          p 
+            +editableText(collection="users" field="profile.name" placeholder="Enter username")
       li
-        a.item-link.close-panel(href="{{pathFor 'chat'}}")
-          .item-content
-            .item-media
-              img.chat.icon-sidebar(src="/img/chatVector.svg")
-            .item-inner
-              .item-title Chat with us
+        p.light ¿insurance?
+        p Eichelmann insurance
       li
-        a.item-link.close-panel(href='')
-          .item-content
-            .item-media
-              i.fa.fa-star.fa-sidebar
-            .item-inner
-              .item-title Vote
-      li 
-        a.item-link.close-panel(href='')
-          .item-content
-            .item-media
-              .fa.fa-share-alt.fa-sidebar
-            .item-inner
-              .item-title Share and win
+        p More about eichelmann insurance agency
       li
-        a.item-link.close-panel(href='')
-          .item-content
-            .item-media
-              i.fa.fa-sign-out.fa-sidebar
-            .item-inner
-              .item-title#logout Logout
+        p.logout Logout

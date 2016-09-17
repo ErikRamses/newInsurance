@@ -25,3 +25,7 @@ if (Meteor.isClient) {
 	}); 
 	$$ = Dom7;
 }
+
+Template.MasterLayout.onRendered(function () {
+	//$(".profile").backstretch("http://goo.gl/BDP5bO");
+});
