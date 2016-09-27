@@ -4,7 +4,13 @@ template(name='Login')
         .page
           .page-content.login-screen-content
             .login-screen-title
-              +logo
+              img.trazo-login(src="/img/trazo-logo.svg")
+              p hello! welcome back
+            .list-block-label.facebook-login
+              a(href="")#facebook-login Connect with Facebook
+            hr.white.hr-medium
+            p.text-center.text-white or
+            p.text-center.text-white Enter your e-mail and password
             .login-screen-form
               form#login
                 .list-block
@@ -12,18 +18,18 @@ template(name='Login')
                     li.item-content
                       .item-inner            
                         .item-input
-                          input(type='text', name='username', placeholder='Your username')
+                          input.input-app-1(type='text', name='username', placeholder='Your username')
                                      
                     li.item-content
                       .item-inner           
                         .item-input
-                          input(type='password', name='password', placeholder='Your password')
+                          input.input-app-1(type='password', name='password', placeholder='Your password')
                              
                 .list-block
                   ul
                     li
-                      input.item-link.list-button.button.ripple-blue.button-big.button-fill.button-raised(type="submit" value="Login")               
-                  .list-block-label
-                    a(href="{{pathFor 'createAccount'}}") Create an account
-                  .list-block-label
-                    a(href="")#facebook-login Login With Facebook
+                      input.item-link.list-button.button.ripple-blue.button-big.button-fill.button-raised(type="submit" value="Login")
+                .list-block-label
+                  a(href="{{pathFor 'createAccount'}}") Create an account
+                .list-block-label
+                  a(href="{{pathFor 'forgotPassword'}}") ¿Forgot? Don't worry, lets see.

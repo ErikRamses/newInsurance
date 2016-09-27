@@ -2,6 +2,31 @@
 /* CreateAccount: Event Handlers */
 /*****************************************************************************/
 Template.CreateAccount.events({
+    'click #facebook-login': function(event) {
+        event.preventDefault();
+        if(Meteor.isCordova) {
+          facebookConnectPlugin.login(['email'],
+          function(){
+            console.log('success');
+          },
+          function() {
+            console.log('error');
+          }
+          );
+        }
+        else
+        {
+        Meteor.loginWithFacebook({}, function(err){
+            if (err) {
+                throw new Meteor.Error("Facebook login failed");
+            }
+            else
+            {
+                Router.go('home');      
+            }
+        });
+        }
+    },
     'submit form': function(event, template) {
         event.preventDefault();
         var username = $('[name=registerUsername]').val();
@@ -33,6 +58,7 @@ Template.CreateAccount.helpers({
 /* CreateAccount: Lifecycle Hooks */
 /*****************************************************************************/
 Template.CreateAccount.onCreated(function () {
+    //import '/imports/client/login/create_account.less';
 });
 
 Template.CreateAccount.onRendered(function () {

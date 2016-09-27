@@ -1,24 +1,32 @@
 template(name="CreateAccount")
-    .login-screen.modal-in
+    .login-screen.create-screen.modal-in
       .view
         .page
           .page-content.login-screen-content
             .login-screen-title
-              +logo
+              img.trazo-login(src="/img/trazo-logo.svg")
+              p hello! lets create your account
+            .list-block-label.facebook-login
+              a(href="")#facebook-login Connect with Facebook
+            hr.white.hr-medium
+            p.text-center.text-white or
+            p.text-center.text-white Enter your e-mail and password
             form
               .list-block
                 ul
                   li.item-content
                     .item-inner                 
                       .item-input
-                        input(type='text', name='registerUsername', placeholder='Your username')                
+                        input.input-app-1(type='text', name='registerUsername', placeholder='Your email')                
                   li.item-content
                     .item-inner                
                       .item-input
-                        input(type='password', name='registerPassword', placeholder='Your password')       
+                        input.input-app-1(type='password', name='registerPassword', placeholder='Your password')       
               .list-block
                 ul
                   li
                     input.item-link.list-button.button.ripple-blue.button-big.button-fill.button-raised(type="submit" value="Sign up")         
                 .list-block-label
                   a(href="{{pathFor 'login'}}") I already have an account, login.
+                .list-block-label
+                  a(href="{{pathFor 'forgotPassword'}}") ¿Forgot? Don't worry, lets see.

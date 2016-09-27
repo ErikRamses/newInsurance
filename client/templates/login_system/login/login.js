@@ -1,5 +1,3 @@
-import { Template } from 'meteor/templating';
-import { ReactiveVar } from 'meteor/reactive-var';
 /*****************************************************************************/
 /* Login: Event Handlers */
 /*****************************************************************************/
@@ -54,6 +52,7 @@ Template.Login.helpers({
 /* Login: Lifecycle Hooks */
 /*****************************************************************************/
 Template.Login.onCreated(function () {
+    //import '/imports/client/login/login.less';
 });
 
 Template.Login.onRendered(function () {
