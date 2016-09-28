@@ -21,33 +21,28 @@ template(name='panelContent')
       .content-block.content-block-gear
         i.fa.fa-cog.fa-2x.pull-right
       .content-block-title.position-bottom
-        p
-          .fa.fa-circle.circle-red
-          {{currentUser.profile.name}}
-        p.type-client.light
-          | Regular client
-        hr.white
-        p.light
-          a.button-transparent(href="#") Invite friends
+        each users
+          p
+            .fa.fa-circle.circle-red
+            +editableText(collection="users" field="profile.name" acceptEmpty=true substitute='<i class="fa fa-pencil"></i>')
+          p.type-client.light
+            | {{currentUser.roles}}
+          hr.white
+          p.light
+            a.button-transparent(href="#") Invite friends
     +Menu
 template(name='Menu')
   .list-block.info-cards
     ul
       li
-        p.light Number on id card
-        if currentUser
+        p.light Driver license id
+        each users
           p 
-            +editableText(collection="users" field="profile.name" placeholder="Enter username")
+            +editableText(collection="users" field="profile.driver_id" placeholder="Enter your driver id" acceptEmpty=true substitute='<i class="fa fa-pencil"></i>')
       li
         p.light ¿insurance?
         p Eichelmann insurance
       li
         p More about eichelmann insurance agency
-        a.item-link.close-panel(href='')
-          .item-content
-            .item-media
-              i.fa.fa-star.fa-sidebar
-            .item-inner
-              .item-title Vote
       li#logout
         p.logout Logout
