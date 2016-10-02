@@ -16,15 +16,16 @@ Template.CreateAccount.events({
         }
         else
         {
-        Meteor.loginWithFacebook({}, function(err){
-            if (err) {
-                throw new Meteor.Error("Facebook login failed");
-            }
-            else
-            {
-                Router.go('home');      
-            }
-        });
+            Meteor.loginWithFacebook({}, function(err){
+                if (err) {
+                    throw new Meteor.Error("Facebook login failed");
+                }
+                else
+                {
+                    Session.set('isNewUser',true);
+                    Router.go('home');   
+                }
+            });
         }
     },
     'submit form': function(event, template) {
@@ -42,6 +43,7 @@ Template.CreateAccount.events({
                 }
                 else
                 {
+                    Session.set('isNewUser',true);
                     Router.go('home');
                 }
             });

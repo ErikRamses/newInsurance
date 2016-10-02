@@ -22,6 +22,7 @@ Template.Login.events({
             }
             else
             {
+                Session.set('isNewUser',true);
                 Router.go('home');      
             }
         });

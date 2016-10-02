@@ -3,10 +3,12 @@ template(name='Home')
 template(name="welcome")
   .pages.navbar-through.toolbar-through
     .page.page-on-center(data-page='index')
-      //+bottomButtons
       +contenidoDashboard
 template(name="contenidoDashboard")
   .page-content.dashboard
+    .typed-box
+      span.typed
+      span.typed-cursor
     .content-block
       .llamadaRender
         a(href="tel:+8119860234")

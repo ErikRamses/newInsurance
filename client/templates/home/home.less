@@ -53,3 +53,39 @@
     	max-width: 121px;
 	}
 }
+
+
+//typed
+.typed-box {
+	padding-top: 40%;
+	max-width: 80%;
+	text-align: center;
+	margin: 0 auto;
+	.typed {
+		color: #fff;
+		font-size: 28px;
+	}
+	.typed-cursor{
+	    opacity: 1;
+	    -webkit-animation: blink 0.7s infinite;
+	    -moz-animation: blink 0.7s infinite;
+	    animation: blink 0.7s infinite;
+	    font-size: 28px;
+	    color: #fff;
+	}
+	@keyframes blink{
+	    0% { opacity:1; }
+	    50% { opacity:0; }
+	    100% { opacity:1; }
+	}
+	@-webkit-keyframes blink{
+	    0% { opacity:1; }
+	    50% { opacity:0; }
+	    100% { opacity:1; }
+	}
+	@-moz-keyframes blink{
+	    0% { opacity:1; }
+	    50% { opacity:0; }
+	    100% { opacity:1; }
+	}
+}
