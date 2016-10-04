@@ -37,7 +37,8 @@ Template.Login.events({
                 console.log(error);
                 alert('Usuario o contraseña incorrectos.');
             } else {
-             //   Router.go('perfil');
+                //Session.set('isNewUser',true);
+                //Router.go('home');
             }
         });
     }
