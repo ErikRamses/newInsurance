@@ -44,7 +44,7 @@ Template.Home.onRendered(function () {
     if (Session.get('isNewUser') == true) {
         $(".typed").typed({
           strings: ["Hello, welcome to Eichelman Insurance App.", "At bottom you can see 3 buttons.", "The red one will alert us about your situation, ^1000 let us help you.", "Bottom left button will call Eichelmann Insurance Agency.", "With bottom right button you can talk with a specialist.", "Top right button will show your profile, feel free to complete your data, this will allow us to help you more."],
-          typeSpeed: 0,
+          typeSpeed: 50,
           contentType: 'text',// or 'html'
           loop: true,
           showCursor: true,
