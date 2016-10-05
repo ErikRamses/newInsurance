@@ -10,9 +10,9 @@ Meteor.methods({
     this.unblock();
 
     Email.send({
-      to: 'hola@nubestra.com',
+      to: 'erik.rmh@gmail.com',
       from: correo,
-      subject: 'This is a message from the App',
+      subject: 'This is a message from Eichelman Insurance',
       text: mensaje+'. email de usuario: '+correo
     });
   },
