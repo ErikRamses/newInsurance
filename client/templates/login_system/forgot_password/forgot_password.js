@@ -9,12 +9,12 @@ Template.ForgotPassword.events({
       Accounts.forgotPassword({email: email}, function(err) {
         if (err) {
           if (err.message === 'User not found [403]') {
-            alert('Usuario no encontrado.');
+            alert('User not found.');
           } else {
-            alert('Lo sentimos, algo salió mal.');
+            alert('Sorry, something wrong.');
           }
         } else {
-          alert('Correo enviado, checa tu bandeja de entrada.');
+          alert('Email sent, verify your inbox.');
         }
       });
 
