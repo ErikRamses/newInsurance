@@ -1,0 +1,6 @@
+template(name="map")
+  .map-container
+    unless geolocationError
+      +googleMap(name="map" options=mapOptions)
+    else 
+      | Geolocation Failed {{geolocationError}}

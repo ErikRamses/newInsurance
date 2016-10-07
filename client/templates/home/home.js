@@ -62,9 +62,9 @@ Template.Home.helpers({
 });
 
 Template.contenidoDashboard.helpers({
-    newUser: function(){
-      return Session.get('isNewUser');
-    }
+  newUser: function(){
+    return Session.get('isNewUser');
+  }
 });
 /*****************************************************************************/
 /* Home: Lifecycle Hooks */

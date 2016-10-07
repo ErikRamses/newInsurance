@@ -6,6 +6,7 @@ template(name="welcome")
       +contenidoDashboard
 template(name="contenidoDashboard")
   .page-content.dashboard
+    +map
     .typed-box
       span.typed
       span.typed-cursor
@@ -17,4 +18,3 @@ template(name="contenidoDashboard")
         a(href="{{pathFor 'chat'}}")
           img.chat(src="/img/chatVector.svg")
     img.choque.shadowed(src="/img/choque.svg")
-
