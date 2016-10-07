@@ -6,7 +6,7 @@ template(name='MasterLayout')
           .navbar-inner.navbar-on-center
             //.center.sliding Eichelmann insurance app
             .right
-              a.link.icon-only.open-panel(href='#')
+              a.link.icon-only.open-panel(href="#")
                 img.menu.shadowed(src="/img/menu.svg")
         +yield
 template(name='panelContent')
@@ -19,30 +19,34 @@ template(name='panelContent')
       }
     .profile-card
       .content-block.content-block-gear
-        i.fa.fa-cog.fa-2x.pull-right
+        a(href="/profile/{{currentUser._id}}")
+          i.fa.fa-cog.fa-2x.pull-right
       .content-block-title.position-bottom
         each users
           p
             .fa.fa-circle.circle-red
-            +editableText(collection="users" field="profile.name" acceptEmpty=true substitute='<i class="fa fa-pencil"></i>')
+            +editableText(collection="users" field="profile.name" acceptEmpty=true substitute='Full name')span.white-no-wrap.fa.fa-pencil
           p.type-client.light
             | {{currentUser.roles}}
           hr.white
           p.light
             a#invite.button-transparent(href="https://www.facebook.com/sharer/sharer.php?u=https://www.meteor.com/") Invite friends
     +Menu
+  +PickerLicencia
 template(name='Menu')
   .list-block.info-cards
     ul
       li
-        p.light Driver license id
+        a(href="#" data-picker=".picker-1" class="open-picker")
+          | View or replace id card
+      li
+        p.light ¿Which insurance?
         each users
           p 
-            +editableText(collection="users" field="profile.driver_id" placeholder="Enter your driver id" acceptEmpty=true substitute='<i class="fa fa-pencil"></i>')
+            +editableText(collection="users" field="profile.which-insurance" placeholder="Type of insurance" acceptEmpty=true substitute='Enter agency')span.white-no-wrap.fa.fa-pencil
       li
-        p.light ¿insurance?
-        p Eichelmann insurance
-      li
-        p More about eichelmann insurance agency
+        p 
+          a(href="https://www.insuranceratesdfw.com/")
+            | More about eichelmann insurance agency
       li#logout
         p.logout Logout

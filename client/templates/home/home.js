@@ -20,6 +20,38 @@ Template.Home.events({
         }
         console.log(username, roomId)
         Router.go('room', {roomId: roomId}, {query: 'username=' + username})
+    },
+    'click img.llamada': function (e) {
+      e.preventDefault()
+      myApp.modal({
+        title:  'Call our representatives',
+        text: 'In any of our lines',
+        verticalButtons: true,
+        buttons: [
+          {
+            text: 'Phone: 214-556-6971',
+            onClick: function() {
+              window.location.href="tel:+8119860234";
+            }
+          },
+          {
+            text: 'Phone: 214-556-6971',
+            onClick: function() {
+              window.location.href="tel:+8119860234";
+            }
+          },
+          {
+            text: 'Phone: 214-556-6971',
+            onClick: function() {
+              window.location.href="tel:+8119860234";
+            }
+          },
+          {
+            text: 'cancel',
+            bold: true
+          },
+        ]
+      });
     }
 });
 
