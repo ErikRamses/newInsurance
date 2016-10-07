@@ -1,32 +1,33 @@
 template(name='Profile')
-    .pages.navbar-through.toolbar-through.profile-page-parent
-        .page.page-on-center
-            .background-overlay
-                .page-content.profile-page
-                    .content-block-title
-                        h2.text-center Israel Ortiz Cortés
-                        p.text-center Age: 26
-                        p.text-center Insurance ID: Axxa-2890789078
-            .page-content
-                .profile-info
-                    .block-1
-                        .content-block-pill
-                            .row
-                                .col-100
-                                    b Insured with
-                                    br
-                                    small Eichelmann Insurance Agency
-                    .block-2
-                        .content-block-pill
-                            .row
-                                .col-100 
-                                    b Another info
-                                    br
-                                    small Of course
-                    .block-3
-                        .content-block-pill
-                            .row
-                                .col-100 
-                                    b But i want more
-                                    br
-                                    small Fair enough
+  .pages.navbar-through.toolbar-through.profile-page-parent
+    .page.page-on-center
+      style.
+        .profile-card::after {
+          background-image: url({{currentUser.profile.profilePicture}});
+        }
+      .profile-card
+        .content-block-title.position-bottom
+          each users
+            p
+              .fa.fa-circle.circle-red
+              +editableText(collection="users" field="profile.name" acceptEmpty=true substitute='<i class="fa fa-pencil"></i>')
+            p.type-client.light
+              | {{currentUser.roles}}
+            hr.white
+            p.light
+              a#invite.button-transparent(href="https://www.facebook.com/sharer/sharer.php?u=https://www.meteor.com/") Invite friends
+      +Menu
+    +PickerLicencia
+template(name="PickerLicencia")
+  // Picker
+  .picker-modal.picker-1
+    .toolbar
+      .toolbar-inner
+        .left
+          p
+            i.fa.fa-camera-retro
+            |  replace with new photo
+        .right
+          a.close-picker(href='#') Done
+    .picker-modal-inner
+      img.license(src="/img/credencial.jpg")
