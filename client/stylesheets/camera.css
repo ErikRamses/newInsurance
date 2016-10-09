@@ -1,0 +1,8 @@
+.camera-popup
+{
+	z-index: 99999;
+	top: 18%;
+    width: 89%;
+    left: 0;
+    margin-left: 0px;
+}

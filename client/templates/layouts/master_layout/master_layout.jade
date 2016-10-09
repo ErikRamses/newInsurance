@@ -15,7 +15,8 @@ template(name='panelContent')
   .panel.panel-left.panel-cover.layout-dark
     style.
       .profile-card::after {
-        background-image: url({{currentUser.profile.profilePicture}});
+        background-image: url({{#if currentUser.profile.profilePicture}}{{currentUser.profile.profilePicture}}{{else}}/img/blank-avatar-big.png{{/if}});
+        background-position: center;
       }
     .profile-card
       .content-block.content-block-gear

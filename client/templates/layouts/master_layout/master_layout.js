@@ -1,4 +1,27 @@
+Template.MasterLayout.created = function() {
+  Uploader.init(this);
+};
+
+/*****************************************************************************/
+/* Profile: Helpers */
+/*****************************************************************************/
 Template.MasterLayout.helpers({
+  'infoLabel': function() {
+    var instance = Template.instance();
+    // we may have not yet selected a file
+    var info = instance.info.get()
+    if (!info) {
+      return;
+    }
+    var progress = instance.globalInfo.get();
+    // we display different result when running or not
+    return progress.running ?
+      info.name + ' - ' + progress.progress + '% - [' + progress.bitrate + ']' :
+      info.name + ' - ' + info.size + 'B';
+  },
+  'progress': function() {
+    return Template.instance().globalInfo.get().progress + '%';
+  }
 });
 
 Template.MasterLayout.events({
@@ -7,20 +30,22 @@ Template.MasterLayout.events({
         Meteor.logout();
         Router.go('login');
         myApp.closePanel();
+    },
+    'click a.takePhoto': function(event, template) {
+        var cameraOptions = {
+            width: 360,
+            height: 234
+        };
+        MeteorCamera.getPicture(cameraOptions, function (error, data) {
+           if (!error) {
+               template.$('.license').attr('src', data); 
+               var imagen = $('img.license').attr('src');
+               Meteor.users.update({_id:Meteor.user()._id}, {$set:{"profile.license":imagen}});
+               //console.log(imagen);
+           }
+        });
+        event.preventDefault();
     }
-    //'click #invite': function() {
-  	//	var recipient = this.facebook_id;
-  	//	var config = Accounts.loginServiceConfiguration.findOne({service: 'facebook'});
-  		//var url = "http://www.facebook.com/dialog/feed?app_id=" + config.appId + "&display=popup&to=" + recipient + "&redirect_uri=" + Meteor.absoluteUrl('_fb?close');
-  		//window.open(url, "Create Post", "height=240,width=450,left=100,top=100");
-  		//FB.ui({
-    	//	method: 'share',
-    	//	display: 'popup',
-    	//	href: 'https://developers.facebook.com/docs/',
-  		//	}, function(response){
-
-  		//	});
-	//}
 });
 
 Template.MasterLayout.onRendered(function () {
