@@ -39,3 +39,6 @@ chrisbutler:typed.js
 session
 mdg:geolocation
 dburles:google-maps
+tomi:upload-jquery
+tomi:upload-server
+mdg:camera
