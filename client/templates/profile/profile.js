@@ -17,8 +17,9 @@ Template.Profile.onCreated(function () {
 });
 
 Template.Profile.onRendered(function () {
-	 $(".background-overlay").backstretch("http://goo.gl/BDP5bO");
+	$(".background-overlay").backstretch("http://goo.gl/BDP5bO");
 });
 
 Template.Profile.onDestroyed(function () {
 });
+

@@ -3,7 +3,9 @@ template(name='Profile')
     .page.page-on-center
       style.
         .profile-card::after {
-          background-image: url({{currentUser.profile.profilePicture}});
+          background-image: url({{#if currentUser.profile.profilePicture}}{{currentUser.profile.profilePicture}}{{else}}/img/blank-avatar-big.png{{/if}});
+          background-position: center;
+          background-color: white;
         }
       .profile-card
         .content-block-title.position-bottom
@@ -24,10 +26,10 @@ template(name="PickerLicencia")
     .toolbar
       .toolbar-inner
         .left
-          p
+          a.takePhoto(href='#')
             i.fa.fa-camera-retro
             |  replace with new photo
         .right
           a.close-picker(href='#') Done
     .picker-modal-inner
-      img.license(src="/img/credencial.jpg")
+      img.license(src="{{#if currentUser.profile.license}}{{currentUser.profile.license}}{{else}}/img/credencial.jpg{{/if}}")
