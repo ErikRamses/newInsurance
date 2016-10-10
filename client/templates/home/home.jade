@@ -7,14 +7,19 @@ template(name="welcome")
 template(name="contenidoDashboard")
   .page-content.dashboard
     +map
-    .typed-box
-      span.typed
-      span.typed-cursor
-    .content-block
-      .llamadaRender
-        a(href="#")
-          img.llamada(src="/img/telefonoVector.svg")
-      .chatRender
-        a(href="{{pathFor 'chat'}}")
-          img.chat(src="/img/chatVector.svg")
-    img.choque.shadowed(src="/img/choque.svg")
+    //+typed
+    +llamada
+    +chat
+    +choque
+template(name="typed")
+  .typed-box
+    span.typed
+    span.typed-cursor
+template(name="llamada")
+  .llamadaRender
+    a(href="#")
+      img.llamada(src="/img/telefonoVector.svg")
+template(name="chat")
+  +sChatBox
+template(name="choque")
+  img.choque.shadowed(src="/img/choque.svg")
