@@ -34,7 +34,6 @@ service-configuration
 goltfisch:jquery-backstretch
 alanning:roles
 babrahams:editable-text
-cesarve:simple-chat
 chrisbutler:typed.js
 session
 mdg:geolocation
@@ -42,3 +41,4 @@ dburles:google-maps
 tomi:upload-jquery
 tomi:upload-server
 mdg:camera
+schat:client-blaze
