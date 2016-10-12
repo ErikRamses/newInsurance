@@ -45,6 +45,22 @@ Template.MasterLayout.events({
            }
         });
         event.preventDefault();
+    },
+    'click a#cambiar-perfil': function(event, template) {
+        var cameraOptions = {
+            width: 260,
+            height: 290
+        };
+        MeteorCamera.getPicture(cameraOptions, function (error, data) {
+           if (!error) {
+               //template.$('.license').attr('src', data);
+               template.$('profile-card:after').css('background-image', 'url(' + data + ')');
+               var imagen = data;
+               Meteor.users.update({_id:Meteor.user()._id}, {$set:{"profile.profilePicture":imagen}});
+               //console.log(imagen);
+           }
+        });
+        event.preventDefault();
     }
 });
 
