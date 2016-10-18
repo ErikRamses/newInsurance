@@ -5,6 +5,7 @@ Template.Login.events({
     'click #facebook-login': function(event) {
         event.preventDefault();
         if(Meteor.isCordova) {
+          console.log('Cordova');
           facebookConnectPlugin.login(['email'],
           function(){
             console.log('success');
@@ -16,6 +17,7 @@ Template.Login.events({
         }
         else
         {
+        console.log('LoginWeb');
         Meteor.loginWithFacebook({}, function(err){
             if (err) {
                 throw new Meteor.Error("Facebook login failed");
