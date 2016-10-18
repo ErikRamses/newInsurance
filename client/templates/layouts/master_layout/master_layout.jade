@@ -20,13 +20,14 @@ template(name='panelContent')
       }
     .profile-card
       .content-block.content-block-gear
-        a(href="/profile/{{currentUser._id}}")
+        //a(href="/profile/{{currentUser._id}}" class="floating-button floating-button-to-popover open-popover")
+        a(href="#" class="floating-button-to-popover open-popover")
           i.fa.fa-cog.fa-2x.pull-right
         a(href="#")#cambiar-perfil
           i.fa.fa-camera.fa-2x.pull-left
       .content-block-title.position-bottom
         each users
-          p
+          p.title-profile
             .fa.fa-circle.circle-red
             +editableText(collection="users" field="profile.name" acceptEmpty=true substitute='Full name')span.white-no-wrap.fa.fa-pencil
           p.type-client.light
@@ -36,20 +37,35 @@ template(name='panelContent')
             a#invite.button-transparent(href="https://www.facebook.com/sharer/sharer.php?u=https://www.meteor.com/") Invite friends
     +Menu
   +PickerLicencia
+  +GearPopOver
 template(name='Menu')
   .list-block.info-cards
     ul
       li
-        a(href="#" data-picker=".picker-1" class="open-picker")
-          | View or replace id card
+        p.light
+          a(href="#" data-picker=".picker-1" class="open-picker")
+            | View or replace id card
       li
         p.light ¿Which insurance?
         each users
           p 
             +editableText(collection="users" field="profile.which-insurance" placeholder="Type of insurance" acceptEmpty=true substitute='Enter agency')span.white-no-wrap.fa.fa-pencil
       li
-        p 
+        p.light
           a(href="https://www.insuranceratesdfw.com/")
             | More about eichelmann insurance agency
       li#logout
         p.logout Logout
+template(name="GearPopOver")
+  .popover.demo-popover
+    .popover-inner
+      .list-block
+        ul
+          li
+            a.item-content.item-link(href='#')
+              .item-inner
+                .item-title Payment Method
+          li
+            a.item-content.item-link(href='#')
+              .item-inner
+                .item-title Help?
