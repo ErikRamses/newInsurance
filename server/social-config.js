@@ -34,7 +34,7 @@ Accounts.onCreateUser(function (options, user) {
   //}
 
   if (user.services.facebook) {
-  	user.profile.profilePicture = getFbPicture(user.services.facebook.accessToken);
+    user.profile.profilePicture = getFbPicture(user.services.facebook.accessToken);
     user.profile.first_name = user.services.facebook.first_name;
     user.profile.last_name = user.services.facebook.last_name;
     user.profile.gender = user.services.facebook.gender;

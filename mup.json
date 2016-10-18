@@ -1,7 +1,7 @@
 {
   "servers": [
     {
-      "host": "104.236.18.19",
+      "host": "104.236.199.100",
       "username": "root",
       "pem": "~/.ssh/id_rsa"
     }
@@ -11,7 +11,7 @@
   "setupMongo": true,
 
   // Application name (no spaces).
-  "appName": "Eichelmann",
+  "appName": "eichelmann",
 
   // Location of app (local directory). This can reference '~' as the users home directory.
   // i.e., "app": "~/Meteor/my-app",
@@ -21,7 +21,7 @@
   // Configure environment
   // ROOT_URL must be set to your correct domain (https or http)
   "env": {
-    "PORT": 80,
+    "PORT": 3010,
     "ROOT_URL": "http://eichelmann.app1.cf"
   },
 
