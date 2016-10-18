@@ -44,3 +44,4 @@ App.info({
 //App.accessRule('*.googleapis.com/*');
 //App.accessRule('*.gstatic.com/*');
 //App.accessRule('*', true);
+App.accessRule('https://*.stripe.com/*');
