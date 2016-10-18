@@ -2,25 +2,6 @@
 /* Home: Event Handlers */
 /*****************************************************************************/
 Template.Home.events({
-    //'click img.chat': function (e) {
-    //    e.preventDefault()
-    //    var roomId = Meteor.user()._id
-    //    var username = Meteor.user().profile.name
-    //    if (!username) {
-    //        if ($('.form-group').hasClass('has-error'))
-    //            return
-    //        $('.form-group').addClass('has-error').append('<span class="help-block">Is required</span>')
-    //        $('input').keyup(function () {
-    //            if ($(this).val() != '') {
-    //                $('.form-group').removeClass('has-error')
-    //                $('span').remove()
-    //            }
-    //        })
-    //        return
-    //    }
-    //    console.log(username, roomId)
-    //    Router.go('room', {roomId: roomId}, {query: 'username=' + username})
-    //},
     'click img.llamada': function (e) {
       e.preventDefault()
       myApp.modal({
@@ -51,6 +32,25 @@ Template.Home.events({
             bold: true
           },
         ]
+      });
+    },
+    'click img.choque': function (e) {
+      e.preventDefault()
+      $('#s-chat-submit-input').val($('#s-chat-submit-input').val() + 'Request for help on car accident');
+      $( ".s-chat-box" ).addClass( "opened" );
+      //emula enter
+      var e = jQuery.Event("keydown");
+      e.which = 13; // Enter
+      $("#s-chat-submit-input").trigger(e);
+      //emula enter
+
+      $(".typed").typed({
+        strings: ["Everything is gonna be alright.", "Take 3 deep breaths.^20000"],
+        typeSpeed: 50,
+        contentType: 'html',// or 'html'
+        loop: false,
+        showCursor: true,
+        backDelay: 2000,
       });
     }
 });
