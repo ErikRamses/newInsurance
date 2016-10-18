@@ -51,3 +51,8 @@ hr.white {
     	color: #fff;
     }
 }
+
+//help picker
+.threebuttons img {
+	max-height: 20px!important;
+}
