@@ -93,6 +93,7 @@ mongo@1.1.12_5
 mongo-id@1.0.5
 mquandalle:jade@0.4.9
 mquandalle:jade-compiler@0.4.5
+mrgalaxy:stripe@2.2.2
 msavin:jetsetter@2.0.0
 msavin:mongol@2.0.1
 nobutakaoshiro:framework7-ios-material@1.0.4
