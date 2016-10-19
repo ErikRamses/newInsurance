@@ -20,13 +20,14 @@ template(name='panelContent')
       }
     .profile-card
       .content-block.content-block-gear
-        a(href="/profile/{{currentUser._id}}")
+        //a(href="/profile/{{currentUser._id}}" class="floating-button floating-button-to-popover open-popover")
+        a(href="#" class="floating-button-to-popover open-popover")
           i.fa.fa-cog.fa-2x.pull-right
-        a(href="#")#cambiar-perfil
+        a(href="#" )#cambiar-perfil
           i.fa.fa-camera.fa-2x.pull-left
       .content-block-title.position-bottom
         each users
-          p
+          p.title-profile
             .fa.fa-circle.circle-red
             +editableText(collection="users" field="profile.name" acceptEmpty=true substitute='Full name')span.white-no-wrap.fa.fa-pencil
           p.type-client.light
@@ -36,20 +37,65 @@ template(name='panelContent')
             a#invite.button-transparent(href="https://www.facebook.com/sharer/sharer.php?u=https://www.meteor.com/") Invite friends
     +Menu
   +PickerLicencia
+  +PickerHelp
+  +GearPopOver
 template(name='Menu')
   .list-block.info-cards
     ul
       li
-        a(href="#" data-picker=".picker-1" class="open-picker")
-          | View or replace id card
+        p.light
+          a(href="#" data-picker=".picker-1" class="open-picker")
+            | View or replace id card
       li
         p.light ¿Which insurance?
         each users
           p 
             +editableText(collection="users" field="profile.which-insurance" placeholder="Type of insurance" acceptEmpty=true substitute='Enter agency')span.white-no-wrap.fa.fa-pencil
       li
-        p 
+        p.light
           a(href="https://www.insuranceratesdfw.com/")
             | More about eichelmann insurance agency
       li#logout
         p.logout Logout
+template(name="GearPopOver")
+  .popover.demo-popover
+    .popover-inner
+      .list-block
+        ul
+          li
+            a.item-content.item-link(href='#')
+              .item-inner
+                .item-title Payment Method
+          li
+            a.item-content.item-link(href='#' data-picker=".picker-2" class="open-picker help-popover")
+              .item-inner
+                .item-title Help?
+template(name="PickerLicencia")
+  // Picker
+  .picker-modal.picker-1
+    .toolbar
+      .toolbar-inner
+        .left
+          a.takePhoto(href='#')
+            i.fa.fa-camera-retro
+            |  replace with new photo
+        .right
+          a.close-picker(href='#') Done
+    .picker-modal-inner
+      img.license(src="{{#if currentUser.profile.license}}{{currentUser.profile.license}}{{else}}/img/driver-id-sample.jpg{{/if}}")
+template(name="PickerHelp")
+  // Picker
+  .picker-modal.picker-2
+    .toolbar
+      .toolbar-inner
+        .left
+        .right
+          a.close-picker(href='#') Understood
+    .picker-modal-inner
+      h2 Hello, welcome to Eichelman Insurance App. 
+      p At bottom you can see 3 buttons 
+      img.threebuttons(src="/img/threebuttons.jpg")
+      p The red one will alert us about your situation.
+      p Bottom left button will call Eichelmann Insurance Agency, call us in any of our lines.
+      p With bottom right button you can talk with a specialist.
+      p Top right button will show your profile, feel free to complete your data, this will allow us to help you properly.

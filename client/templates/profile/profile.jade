@@ -20,16 +20,3 @@ template(name='Profile')
               a#invite.button-transparent(href="https://www.facebook.com/sharer/sharer.php?u=https://www.meteor.com/") Invite friends
       +Menu
     +PickerLicencia
-template(name="PickerLicencia")
-  // Picker
-  .picker-modal.picker-1
-    .toolbar
-      .toolbar-inner
-        .left
-          a.takePhoto(href='#')
-            i.fa.fa-camera-retro
-            |  replace with new photo
-        .right
-          a.close-picker(href='#') Done
-    .picker-modal-inner
-      img.license(src="{{#if currentUser.profile.license}}{{currentUser.profile.license}}{{else}}/img/credencial.jpg{{/if}}")

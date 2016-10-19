@@ -63,7 +63,13 @@ Template.MasterLayout.events({
         event.preventDefault();
     }
 });
-
+// cierra el popover para mostrar el picker con ayuda
+Template.GearPopOver.events({
+  'click .help-popover': function(event){
+        event.preventDefault();
+        myApp.closeModal();
+    }
+});
 Template.MasterLayout.onRendered(function () {
   if (Meteor.isClient) {
     //inicializar app y todo framework 7
