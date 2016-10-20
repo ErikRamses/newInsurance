@@ -4,19 +4,19 @@ ServiceConfiguration.configurations.remove({
     service: 'facebook'
 });
 //on server
-/* 
+
 ServiceConfiguration.configurations.insert({
     service: 'facebook',
-    appId: '786521788124677',
-    secret: 'c0c8b37d325e2b2768f944f38056edc7'
+    appId: '1746937965559748',
+    secret: 'f6fa6465d04217fcbe64916f20ad8438'
 });
-*/
+
 //localhost
-ServiceConfiguration.configurations.insert({
-    service: 'facebook',
-    appId: '1278922648812559',
-    secret: '45e0a50ec45b09733439eb503ab01b77'
-});
+//ServiceConfiguration.configurations.insert({
+//    service: 'facebook',
+//    appId: '1278922648812559',
+//    secret: '45e0a50ec45b09733439eb503ab01b77'
+//});
 
 Accounts.onCreateUser(function (options, user) {
   if (options.profile) {
