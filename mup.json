@@ -3,7 +3,7 @@
     {
       "host": "104.236.199.100",
       "username": "root",
-      "pem": "~/.ssh/id_rsa"
+      "pem": "~/Descargas/id_rsa"
     }
   ],
 
@@ -16,7 +16,7 @@
   // Location of app (local directory). This can reference '~' as the users home directory.
   // i.e., "app": "~/Meteor/my-app",
   // This is the same as the line below.
-  "app": "~/Desktop/oficina/node/newInsurance",
+  "app": "~/Documentos/Meteor/newInsurance",
 
   // Configure environment
   // ROOT_URL must be set to your correct domain (https or http)
