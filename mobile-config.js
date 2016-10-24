@@ -11,9 +11,9 @@ App.icons({
   'android_xhdpi': 'resources/icons/android/res/drawable-xhdpi/icon.png',
   'android_xxhdpi': 'resources/icons/android/res/drawable-xxhdpi/icon.png',
   'android_xxxhdpi': 'resources/icons/android/res/drawable-xxxhdpi/icon.png',
-  'iphone_2x': 'resources/icons/ios/res/Icon-App-72x72@2x.png',
+  'iphone_2x': 'resources/icons/ios/res/Icon-App-76x76@1x.png',
   'iphone_3x': 'resources/icons/ios/res/Icon-App-76x76@2x.png',
-  'ipad': 'rresources/icons/ios/res/Icon-App-76x76@2x.png',
+  'ipad': 'resources/icons/ios/res/Icon-App-76x76@2x.png',
   'ipad_2x': 'resources/icons/ios/res/Icon-App-76x76@2x.png',
   'ipad_pro': 'resources/icons/ios/res/Icon-App-76x76@2x.png',
   'ios_settings': 'resources/icons/ios/res/Icon-App-29x29@2x.png',
@@ -43,6 +43,11 @@ App.launchScreens({
   //'android_xhdpi_landscape': 'resources/splash/drawable-land-xhdpi/screen.png',
   //'android_xxhdpi_portrait': 'resources/splash/drawable-xxhdpi/screen.png',
   //'android_xxhdpi_landscape': 'resources/splash/drawable-land-xxhdpi/screen.png'
+});
+
+App.configurePlugin('com.phonegap.plugins.facebookconnect', {
+  APP_ID: '1746937965559748',
+  API_KEY: 'f6fa6465d04217fcbe64916f20ad8438'
 });
 
 App.setPreference('SplashScreen', 'CDVSplashScreen'); 

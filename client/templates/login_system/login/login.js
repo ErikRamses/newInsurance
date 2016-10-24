@@ -16,7 +16,7 @@ Template.Login.events({
         }
         else
         {
-        Meteor.loginWithFacebook({}, function(err){
+        Meteor.loginWithFacebook({ requestPermissions: ['email']}, function(err){
             if (err) {
                 throw new Meteor.Error("Facebook login failed");
             }
