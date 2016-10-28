@@ -11,7 +11,11 @@ App.icons({
   'android_xhdpi': 'resources/icons/android/res/drawable-xhdpi/icon.png',
   'android_xxhdpi': 'resources/icons/android/res/drawable-xxhdpi/icon.png',
   'android_xxxhdpi': 'resources/icons/android/res/drawable-xxxhdpi/icon.png',
+<<<<<<< HEAD
   'iphone_2x': 'resources/icons/ios/res/Icon-App-76x76@1x.png',
+=======
+  'iphone_2x': 'resources/icons/ios/res/Icon-App-76x76@2x.png',
+>>>>>>> origin/master
   'iphone_3x': 'resources/icons/ios/res/Icon-App-76x76@2x.png',
   'ipad': 'resources/icons/ios/res/Icon-App-76x76@2x.png',
   'ipad_2x': 'resources/icons/ios/res/Icon-App-76x76@2x.png',

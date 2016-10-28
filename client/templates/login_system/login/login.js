@@ -22,7 +22,6 @@ Template.Login.events({
             }
             else
             {
-                Session.set('isNewUser',true);
                 Router.go('home');      
             }
         });
@@ -37,8 +36,7 @@ Template.Login.events({
                 console.log(error);
                 alert('Usuario o contraseña incorrectos.');
             } else {
-                //Session.set('isNewUser',true);
-                //Router.go('home');
+                Router.go('home');
             }
         });
     }
