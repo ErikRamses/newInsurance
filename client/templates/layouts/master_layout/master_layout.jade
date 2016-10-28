@@ -2,13 +2,13 @@ template(name='MasterLayout')
   +panelContent
   .views
     .view.view-main
-        .navbar
-          .navbar-inner.navbar-on-center
-            //.center.sliding Eichelmann insurance app
-            .right
-              a.link.icon-only.open-panel(href="#")
-                img.menu.shadowed(src="/img/menu.svg")
-        +yield
+      //.navbar
+        .navbar-inner.navbar-on-center
+          .center.sliding Eichelmann insurance app
+          .right
+            a.link.icon-only.open-panel(href="#")
+              img.menu.shadowed(src="/img/menu.svg")
+      +yield
 template(name='panelContent')
   .statusbar-overlay
   .panel-overlay

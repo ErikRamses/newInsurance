@@ -38,8 +38,8 @@ Template.CreateAccount.events({
             }, function(error){
                 if(error){
                     console.log(error);
-                    //myApp.alert("User Exist, Login with your password.");
                     Router.go('login');
+                    myApp.alert("User Exist, Login with your password.");
                 }
                 else
                 {
