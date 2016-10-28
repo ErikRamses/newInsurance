@@ -1,5 +1,23 @@
 {
-  "public": {
-
+  "public": {},
+  "private": {
+    "oAuth": {
+      "facebook": {
+        "appId": "1746937965559748",
+        "secret": "f6fa6465d04217fcbe64916f20ad8438"
+      },
+      "github": {
+        "clientId": "",
+        "secret": ""
+      },
+      "google": {
+        "clientId": "",
+        "secret": ""
+      },
+      "twitter": {
+        "consumerKey": "",
+        "secret": ""
+      }
+    }
   }
 }
