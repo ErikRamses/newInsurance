@@ -11,11 +11,7 @@ App.icons({
   'android_xhdpi': 'resources/icons/android/res/drawable-xhdpi/icon.png',
   'android_xxhdpi': 'resources/icons/android/res/drawable-xxhdpi/icon.png',
   'android_xxxhdpi': 'resources/icons/android/res/drawable-xxxhdpi/icon.png',
-<<<<<<< HEAD
-  'iphone_2x': 'resources/icons/ios/res/Icon-App-76x76@1x.png',
-=======
   'iphone_2x': 'resources/icons/ios/res/Icon-App-76x76@2x.png',
->>>>>>> origin/master
   'iphone_3x': 'resources/icons/ios/res/Icon-App-76x76@2x.png',
   'ipad': 'resources/icons/ios/res/Icon-App-76x76@2x.png',
   'ipad_2x': 'resources/icons/ios/res/Icon-App-76x76@2x.png',
@@ -49,9 +45,9 @@ App.launchScreens({
   //'android_xxhdpi_landscape': 'resources/splash/drawable-land-xxhdpi/screen.png'
 });
 
-App.configurePlugin('com.phonegap.plugins.facebookconnect', {
-  APP_ID: '1746937965559748',
-  API_KEY: 'f6fa6465d04217fcbe64916f20ad8438'
+App.configurePlugin('cordova-plugin-facebook4', {
+  APP_ID: '1278922648812559',
+  APP_NAME: '45e0a50ec45b09733439eb503ab01b77'
 });
 
 App.setPreference('SplashScreen', 'CDVSplashScreen'); 
