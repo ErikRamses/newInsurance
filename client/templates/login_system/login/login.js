@@ -5,15 +5,13 @@ Template.Login.events({
     'click #facebook-login': function(event) {
         event.preventDefault();
         if(Meteor.isCordova) {
-          Meteor.loginWithNativeFacebook({ requestPermissions: ['email']}, function(err){
-            if (err) {
-                throw new Meteor.Error("Facebook login failed");
+          var fbLoginSuccess = function (userData) {
+            alert("UserInfo: " + JSON.stringify(userData));
             }
-            else
-            {
-                Router.go('home');      
-            }
-          });
+        facebookConnectPlugin.login(["public_profile"],
+            fbLoginSuccess,
+            function (error) { alert("" + error) }
+            );
         }
         else
         {

@@ -54,5 +54,6 @@ App.setPreference('SplashScreen', 'CDVSplashScreen');
 App.accessRule('*.google.com/*');
 App.accessRule('*.googleapis.com/*');
 App.accessRule('*.gstatic.com/*');
+App.accessRule('*.facebook.com/*');
 App.accessRule('*', true);
 App.accessRule('https://*.stripe.com/*');

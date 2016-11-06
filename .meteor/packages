@@ -20,8 +20,6 @@ shell-server@0.2.1            # Server-side component of the `meteor shell` comm
 
 accounts-password@1.3.1
 meteortoys:allthings
-accounts-facebook@1.0.11
-accounts-google@1.0.11
 blaze@2.1.8
 check@1.2.4
 email@1.1.18
@@ -30,19 +28,19 @@ iron:router
 mquandalle:jade
 nobutakaoshiro:framework7-ios-material
 less@2.7.6
-service-configuration@1.0.11
+service-configuration
 goltfisch:jquery-backstretch
 alanning:roles
 babrahams:editable-text
 chrisbutler:typed.js
 session@1.1.7
-mdg:geolocation
 dburles:google-maps
 tomi:upload-jquery
 tomi:upload-server
-mdg:camera
 schat:client-blaze
 mrgalaxy:stripe
-jsep:facebook-native-login
-crosswalk@1.7.0
 meteorhacks:kadira
+mdg:camera
+mdg:geolocation
+accounts-facebook
+jsep:facebook-native-login

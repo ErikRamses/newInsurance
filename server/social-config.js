@@ -1,20 +1,13 @@
 var getFbPicture;
 
-ServiceConfiguration.configurations.remove({
-    service: 'facebook'
-});
-//on server
-//ServiceConfiguration.configurations.insert({
-//    service: 'facebook',
-//    appId: '1746937965559748',
-//    secret: 'f6fa6465d04217fcbe64916f20ad8438'
-//});
-
-//localhost
-ServiceConfiguration.configurations.insert({
-    service: 'facebook',
-    appId: '1278922648812559',
-    secret: '45e0a50ec45b09733439eb503ab01b77'
+ServiceConfiguration.configurations.upsert({
+  service: "facebook"
+}, {
+  $set: {
+    appId: "1278922648812559",
+    loginStyle: "popup",
+    secret: "45e0a50ec45b09733439eb503ab01b77"
+  }
 });
 
 Accounts.onCreateUser(function (options, user) {
