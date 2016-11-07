@@ -10,21 +10,21 @@ Template.Home.events({
         verticalButtons: true,
         buttons: [
           {
-            text: 'Phone: 214-556-6971',
+            text: 'After hours Safeco Insurance: 1866-272-3326',
             onClick: function() {
-              window.location.href="tel:+8119860234";
+              window.location.href="tel:+1866-272-3326";
             }
           },
           {
-            text: 'Phone: 214-556-6971',
+            text: 'Eichelmann Insurance #: 214-556-6971',
             onClick: function() {
-              window.location.href="tel:+8119860234";
+              window.location.href="tel:+214-556-6971";
             }
           },
           {
-            text: 'Phone: 214-556-6971',
+            text: 'Eichelmann Insurance Fax#: 214-879-0230',
             onClick: function() {
-              window.location.href="tel:+8119860234";
+              window.location.href="tel:+214-879-0230";
             }
           },
           {
@@ -45,7 +45,7 @@ Template.Home.events({
       //emula enter
 
       $(".typed").typed({
-        strings: ["Everything is gonna be alright.", "Take 3 deep breaths.^20000"],
+        strings: ["Please follow the Checklist", "1.Check to confirm that everyone is OK? If not, Please call 911 for assistance. ^20000", "If option #1 is not needed", "2. Exchange insurance information", "3.Exchange IDs", "4. Dial 911 to file accident report", "5. Take pictures and videos to make sure at faults are established"],
         typeSpeed: 50,
         contentType: 'html',// or 'html'
         loop: false,
@@ -82,11 +82,11 @@ Template.Home.onDestroyed(function () {
 Meteor.startup(function () {
     sChat.init('AwXTF4uoB4uTaKM3t', {
         ssl: true,
-        welcomeMessage: 'Welcome to Eichelmann Insurance Support, how can I help you?',
+        welcomeMessage: 'Thank you so much for using our EICHELMANN Insurance App! How may we assist you?',
         hostName: 'www.simplechat.support',
         labels: {
             sendPlaceholder: 'Let us help you',
-            headerTitle: '¡Eichelmann Insurance Support!'
+            headerTitle: 'Eichelmann Insurance Support'
         }
     });
 });
