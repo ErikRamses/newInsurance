@@ -46,8 +46,8 @@ App.launchScreens({
 });
 
 App.configurePlugin('cordova-plugin-facebook4', {
-  APP_ID: '1278922648812559',
-  APP_NAME: '45e0a50ec45b09733439eb503ab01b77'
+  APP_ID: '1746937965559748',
+  APP_NAME: 'f6fa6465d04217fcbe64916f20ad8438'
 });
 
 App.setPreference('SplashScreen', 'CDVSplashScreen'); 
