@@ -8,6 +8,7 @@ Template.CreateAccount.events({
           facebookConnectPlugin.login(['email'],
           function(){
             console.log('success');
+            Router.go('home');
           },
           function() {
             console.log('error');

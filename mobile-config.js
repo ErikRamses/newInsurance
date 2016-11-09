@@ -1,6 +1,10 @@
 App.info({
+  id: 'com.hygge.admin.insurance',
   name: 'Eichelmann Insurance',
   description: 'Know where you are, and get help from the team at Eichelmann Insurance Agency',
+  author: 'Hygge',
+  email: 'hello@colectivohygge.com',
+  website: 'http://app1.cf/getapp',
   version: '1.0',
   buildNumber: '100'
 });
@@ -57,3 +61,5 @@ App.accessRule('*.gstatic.com/*');
 App.accessRule('*.facebook.com/*');
 App.accessRule('*', true);
 App.accessRule('https://*.stripe.com/*');
+App.accessRule('http://*', {type: 'navigation'});
+App.accessRule('https://*', {type: 'navigation'});

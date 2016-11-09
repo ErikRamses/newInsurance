@@ -5,13 +5,15 @@ Template.Login.events({
     'click #facebook-login': function(event) {
         event.preventDefault();
         if(Meteor.isCordova) {
-          var fbLoginSuccess = function (userData) {
-            alert("UserInfo: " + JSON.stringify(userData));
-            }
-        facebookConnectPlugin.login(["public_profile"],
-            fbLoginSuccess,
-            function (error) { alert("" + error) }
-            );
+          facebookConnectPlugin.login(['email'],
+          function(){
+            console.log('success');
+            Router.go('home');
+          },
+          function() {
+            console.log('error');
+          }
+          );
         }
         else
         {

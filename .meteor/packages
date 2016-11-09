@@ -42,3 +42,5 @@ mdg:geolocation
 accounts-facebook@1.0.10
 jsep:facebook-native-login
 nubestra:eichelmannchat
+accounts-base
+accounts-ui
