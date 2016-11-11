@@ -6,6 +6,7 @@ Template.Login.events({
         event.preventDefault();
         if(Meteor.isCordova) {
           facebookConnectPlugin.login(['email'],
+<<<<<<< HEAD
           function(data){
             //alert('success');
             Router.go('home');
@@ -14,6 +15,12 @@ Template.Login.events({
             alert('not login'+data);
             //Router.go('home');
           }
+=======
+            function(){
+              console.log('exito');
+              Router.go('home');
+            }
+>>>>>>> origin/master
           );
         }
         else
