@@ -6,13 +6,10 @@ Template.Login.events({
         event.preventDefault();
         if(Meteor.isCordova) {
           facebookConnectPlugin.login(['email'],
-          function(){
-            console.log('success');
-            Router.go('home');
-          },
-          function() {
-            console.log('error');
-          }
+            function(){
+              console.log('exito');
+              Router.go('home');
+            }
           );
         }
         else
