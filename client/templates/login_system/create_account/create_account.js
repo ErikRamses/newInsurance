@@ -4,30 +4,15 @@
 Template.CreateAccount.events({
     'click #facebook-login': function(event) {
         event.preventDefault();
-        if(Meteor.isCordova) {
-          facebookConnectPlugin.login(['email'],
-          function(){
-            console.log('success');
-            Router.go('home');
-          },
-          function() {
-            console.log('error');
-          }
-          );
-        }
-        else
-        {
-            Meteor.loginWithFacebook({}, function(err){
-                if (err) {
-                    throw new Meteor.Error("Facebook login failed");
-                }
-                else
-                {
-                    Session.set('isNewUser',true);
-                    Router.go('home');   
-                }
-            });
-        }
+        Meteor.loginWithFacebook({}, function(err){
+            if (err) {
+                throw new Meteor.Error("Facebook login failed");
+            }
+            else
+            {
+                Router.go('home');   
+            }
+        });
     },
     'submit form': function(event, template) {
         event.preventDefault();
