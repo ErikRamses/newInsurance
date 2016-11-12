@@ -60,6 +60,5 @@ App.accessRule('*.googleapis.com/*');
 App.accessRule('*.gstatic.com/*');
 App.accessRule('*.facebook.com/*');
 App.accessRule('*', true);
-App.accessRule('https://*.stripe.com/*');
 App.accessRule('http://*', {type: 'navigation'});
 App.accessRule('https://*', {type: 'navigation'});
