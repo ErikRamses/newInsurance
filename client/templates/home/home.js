@@ -1,6 +1,9 @@
 /*****************************************************************************/
 /* Home: Event Handlers */
 /*****************************************************************************/
+import '/imports/client/tpl-container/master_layout.js';
+import '/imports/client/tpl-container/master_layout.less';
+
 Template.Home.events({
     'click img.llamada': function (e) {
       e.preventDefault()
