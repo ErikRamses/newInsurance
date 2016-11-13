@@ -54,7 +54,6 @@ iron:middleware-stack@1.1.0
 iron:router@1.0.13
 iron:url@1.0.11
 jquery@1.11.10
-jsep:facebook-native-login@0.1.0
 lai:collection-extensions@0.2.1_1
 launch-screen@1.1.0
 less@2.7.7
