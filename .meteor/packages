@@ -32,13 +32,10 @@ alanning:roles
 babrahams:editable-text
 chrisbutler:typed.js
 session@1.1.7
-dburles:google-maps
 tomi:upload-jquery
 tomi:upload-server
-mrgalaxy:stripe
 meteorhacks:kadira
 mdg:camera
-mdg:geolocation
 accounts-facebook@1.0.11
 jsep:facebook-native-login
 nubestra:eichelmannchat
