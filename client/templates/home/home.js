@@ -1,9 +1,6 @@
 /*****************************************************************************/
 /* Home: Event Handlers */
 /*****************************************************************************/
-import '/imports/client/tpl-container/master_layout.js';
-import '/imports/client/tpl-container/master_layout.less';
-
 Template.Home.events({
     'click img.llamada': function (e) {
       e.preventDefault()
@@ -63,12 +60,6 @@ Template.Home.events({
 /*****************************************************************************/
 Template.Home.helpers({
 });
-
-Template.contenidoDashboard.helpers({
-  newUser: function(){
-    return Session.get('isNewUser');
-  }
-});
 /*****************************************************************************/
 /* Home: Lifecycle Hooks */
 /*****************************************************************************/
@@ -79,17 +70,4 @@ Template.Home.onRendered(function () {
 });
 
 Template.Home.onDestroyed(function () {
-    Session.set('isNewUser', false);
-});
-
-Meteor.startup(function () {
-    sChat.init('AwXTF4uoB4uTaKM3t', {
-        ssl: true,
-        welcomeMessage: 'Thank you so much for using our EICHELMANN Insurance App! How may we assist you?',
-        hostName: 'www.simplechat.support',
-        labels: {
-            sendPlaceholder: 'Let us help you',
-            headerTitle: 'Eichelmann Insurance Support'
-        }
-    });
 });
