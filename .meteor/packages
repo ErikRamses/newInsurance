@@ -40,5 +40,6 @@ meteorhacks:kadira
 mdg:camera
 mdg:geolocation
 accounts-facebook@1.0.11
+jsep:facebook-native-login
 nubestra:eichelmannchat
 crosswalk
