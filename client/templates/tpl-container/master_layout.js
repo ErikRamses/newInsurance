@@ -1,6 +1,3 @@
-import { Template } from 'meteor/templating';
-import './master_layout.jade';
-
 Template.MasterLayout.created = function() {
   Uploader.init(this);
 };
