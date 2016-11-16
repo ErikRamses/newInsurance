@@ -86,5 +86,4 @@ Template.MasterLayout.onRendered(function () {
     }); 
     $$ = Dom7;
   }
-	//$(".profile").backstretch("http://goo.gl/BDP5bO");
 });
