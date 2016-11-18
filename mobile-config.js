@@ -5,8 +5,8 @@ App.info({
   author: 'Hygge',
   email: 'hello@colectivohygge.com',
   website: 'http://app1.cf/getapp',
-  version: '1.0',
-  buildNumber: '100'
+  version: '1.1',
+  buildNumber: '200'
 });
 
 App.icons({
