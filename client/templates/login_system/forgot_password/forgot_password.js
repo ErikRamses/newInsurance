@@ -15,6 +15,7 @@ Template.ForgotPassword.events({
           }
         } else {
           alert('Email sent, verify your inbox.');
+          Router.go('Login');
         }
       });
 

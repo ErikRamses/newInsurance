@@ -10,3 +10,18 @@ Meteor.startup(function () {
 
   process.env.MAIL_URL = 'smtp://' + encodeURIComponent(smtp.username) + ':' + encodeURIComponent(smtp.password) + '@' + encodeURIComponent(smtp.server) + ':' + smtp.port;
 });
+
+Accounts.emailTemplates.siteName = "Eichelmann Insurance";
+Accounts.emailTemplates.from = "Agency Admin <accounts@eichelmann.com>";
+Accounts.emailTemplates.enrollAccount.subject = function (user) {
+    return "Welcome to Eichelmann Insurance " + user.profile.name;
+};
+Accounts.emailTemplates.enrollAccount.text = function (user, url) {
+   return "You have been selected to participate in building a better future!"
+     + " To activate your account, simply click the link below:\n\n"
+     + url;
+};
+Accounts.emailTemplates.resetPassword.from = function () {
+   // Overrides value set in Accounts.emailTemplates.from when resetting passwords
+   return "Eichelmann Insurance Password Reset <accounts@eichelmann.com>";
+};
