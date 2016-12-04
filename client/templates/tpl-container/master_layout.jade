@@ -2,12 +2,6 @@ template(name='MasterLayout')
   +panelContent
   .views
     .view.view-main
-      //.navbar
-        .navbar-inner.navbar-on-center
-          .center.sliding Eichelmann insurance app
-          .right
-            a.link.icon-only.open-panel(href="#")
-              img.menu.shadowed(src="/img/menu.svg")
       +yield
 template(name='panelContent')
   .statusbar-overlay
@@ -20,7 +14,6 @@ template(name='panelContent')
       }
     .profile-card
       .content-block.content-block-gear
-        //a(href="/profile/{{currentUser._id}}" class="floating-button floating-button-to-popover open-popover")
         a(href="#" class="floating-button-to-popover open-popover")
           i.fa.fa-cog.fa-2x.pull-right
         a(href="#" )#cambiar-perfil
@@ -38,7 +31,7 @@ template(name='panelContent')
     +Menu
   +PickerLicencia
   +PickerHelp
-  +PickerPayment
+  //+PickerPayment
   +GearPopOver
 template(name='Menu')
   .list-block.info-cards
@@ -67,7 +60,7 @@ template(name="GearPopOver")
             a.item-content.item-link(href='#' data-picker=".picker-2" class="open-picker help-popover")
               .item-inner
                 .item-title Help?
-          li
+          //li
             a.item-content.item-link(href='#' data-picker=".picker-payment" class="open-picker help-popover")
               .item-inner
                 .item-title payment
@@ -100,8 +93,7 @@ template(name="PickerHelp")
       p Bottom left button will call Eichelmann Insurance Agency, call us in any of our lines.
       p With bottom right button you can talk with a specialist.
       p Top right button will show your profile.
-template(name="PickerPayment")
-  // Picker
+//template(name="PickerPayment")
   .picker-modal.picker-payment
     .toolbar
       .toolbar-inner
